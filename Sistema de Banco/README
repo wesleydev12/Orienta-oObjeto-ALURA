@@ -1,0 +1,86 @@
+
+Abriremos o Visual Studio Code para começarmos nosso curso de orientação a objetos. Lembrando que esse treinamento é uma continuação, e que a instalação do Node.js, que utilizamos como interpretador dos nossos códigos, é ensinada no curso anterior.
+
+Trabalharemos em um novo projeto, encomendado pelo banco Bytebank, no qual criaremos um sistema que permite o cadastro de clientes e contas-correntes, além das operações bancárias mais comuns. Em uma nova pasta, criaremos o arquivo index.js, que servirá de entrada para nosso sistema.
+
+Neste arquivo declararemos nosso primeiro cliente, uma variável do tipo const ("constante", ou seja, que não é alterada durante seu ciclo de vida) que chamaremos de cliente1Nome e cujo valor será "Ricardo".
+
+const cliente1Nome = "Ricardo";COPIAR CÓDIGO
+Outra informação que gostaríamos de armazenar é o CPF de cada cliente. Sendo assim, criaremos outra variável, cliente1CPF, cujo valor será 11122233309.
+
+const cliente1Nome = "Ricardo";
+const cliente1CPF = "11122233309";COPIAR CÓDIGO
+Perceba que estamos utilizando o ponto e vírgula ao final de cada instrução, algo que não é obrigatório no JS e vai da preferência de cada programador.
+
+O Bytebank também nos pediu mais uma informação, que é o número da agência de cada cliente. Criaremos então a variável cliente1Agencia, cujo valor será 1001.
+
+const cliente1Nome = "Ricardo";
+const cliente1CPF = 11122233309;
+const cleinte1Agencia = 1001;COPIAR CÓDIGO
+Clientes de banco possuem um saldo monetário em suas contas. Portanto, criaremos a variável cliente1Saldo com o valor 0.
+
+const cliente1Nome = "Ricardo";
+const cliente1CPF = 11122233309;
+const cliente1Agencia = 1001;
+const cliente1Saldo = 0;COPIAR CÓDIGO
+Passaremos então para a criação de um segundo cliente, a "Alice", que possuirá as mesmas informações que o cliente anterior, mas recebendo outros dados - cliente2CPF = 88822233309, cliente2Agencia = 1001 (a mesma agência) e cliente2Saldo = 0. Para facilitar o preenchimento dessas informações, podemos copiar e colar as instruções do primeiro cliente e somente alterar os campos necessários. A combinação de teclas "Ctrl + Alt" nos ajuda nesse processo, permitindo alterar diversas linhas de uma só vez (por exemplo, substituindo cliente2 por cliente1).
+
+const cliente1Nome = "Ricardo";
+const cliente1CPF = 11122233309;
+const cliente1Agencia = 1001;
+const cliente1Saldo = 0;
+
+const cliente2Nome = "Alice";
+const cliente2CPF = 88822233309;
+const cliente2Agencia = 1001;
+const cliente2Saldo = 0;COPIAR CÓDIGO
+Por fim, faremos um console.log() de cliente1Nome para verificarmos se nosso arquivo está executando como desejado.
+
+const cliente1Nome = "Ricardo";
+const cliente1CPF = 11122233309;
+const cliente1Agencia = 1001;
+const cliente1Saldo = 0;
+
+const cliente2Nome = "Alice";
+const cliente2CPF = 88822233309;
+const cliente2Agencia = 1001;
+const cliente2Saldo = 0;
+
+console.log(cliente1Nome);COPIAR CÓDIGO
+No terminal (como o Powershell ou o Prompt de Comando), acessaremos o diretório do projeto e executaremos node ./index.js. Como retorno, teremos:
+
+Ricardo
+
+Percebemos que o interpretador do Node consegue carregar o nosso arquivo e imprimir o nome do cliente como desejávamos. Entretanto, esse código não parece adequado, já que temos muita repetição - repetição esta que continuará ocorrendo para cada novo cliente que tentarmos criar, como um cliente3.
+
+const cliente1Nome = "Ricardo";
+const cliente1CPF = 11122233309;
+const cliente1Agencia = 1001;
+const cliente1Saldo = 0;
+
+const cliente2Nome = "Alice";
+const cliente2CPF = 88822233309;
+const cliente2Agencia = 1001; 
+const cliente2Saldo = 0;
+
+const cliente3Nome = "Alice";
+const cliente3CPF = 88822233309;
+const cliente3Agencia = 1001;
+const cliente3Saldo = 0;
+
+console.log(cliente1Nome);COPIAR CÓDIGO
+Ao pensarmos que um banco tem milhares de clientes, a situação fica ainda mais preocupante. Se quisermos adicionar novas informações, como cliente3RG, também precisaremos fazê-lo para cada um dos clientes do sistema. Deve existir uma maneira melhor de pensarmos nosso sistema para evitarmos tal repetição constante de código.
+
+Sabemos que, no momento, o Bytebank precisa das informações "nome", "CPF", "agência" e "saldo" de cada cliente, e que essa estrutura se repetirá para todos os clientes do banco.
+
+Saindo um pouco do cenário bancário, sabemos que as fábricas que produzem peças o fazem em grande quantidade, repetindo sempre a mesma peça (ainda que existam alguns detalhes diferentes, como pinturas ou customizações). Nessa indústria, o problema da repetição é resolvido usando moldes, com os quais é possível fabricar novamente a mesma peça inúmeras vezes, aumentando a produtividade e a eficiência.
+
+A ideia de termos um molde com o qual podemos recriar o mesmo resultado diversas vezes, como uma peça ou objeto, é bastante interessante. Será que conseguiríamos aplicá-la ao nosso código? Sabemos as características que cliente precisa, e gostaríamos de utilizá-las em um molde, por exemplo:
+
+{ 
+const nome;
+const cpf;
+const agencia;
+const saldo;
+}COPIAR CÓDIGO
+Aqui não temos nenhum valor atribuído às variáveis, e estamos somente indicando que elas existem no "molde". Esse exemplo é apenas ilustrativo, e no próximo vídeo entenderemos mais a fundo como é que utilizaremos efetivamente tais moldes em nosso código.
