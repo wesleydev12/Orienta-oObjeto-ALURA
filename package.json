@@ -1,0 +1,20 @@
+{
+  "name": "bytebank",
+  "version": "1.0.0",
+  "description": "Projeto do ByteBank para seus clientes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesleydev12/Orientacao-Objeto-ALURA.git"
+  },
+  "author": "Wesley",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/wesleydev12/Orientacao-Objeto-ALURA/issues"
+  },
+  "homepage": "https://github.com/wesleydev12/Orientacao-Objeto-ALURA#readme"
+}
