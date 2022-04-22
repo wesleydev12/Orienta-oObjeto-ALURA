@@ -1,28 +1,28 @@
 import {ContaCorrente} from "./ContaCorrente.js";
 import {Cliente} from "./Cliente.js";
 
-const cliente1 = new Cliente();
-cliente1.nome = "Ricardo";
-cliente1.cpf = "00022233355";
-const contaCorrenteRicardo = new ContaCorrente();
-contaCorrenteRicardo.agencia = 1001;
-contaCorrenteRicardo.cliente = cliente1;
+const cliente1 = new Cliente("Ricardo", "00022233355");
+// cliente1.nome = "Ricardo";
+// cliente1.cpf = "00022233355";
+const contaCorrenteRicardo = new ContaCorrente(1001, cliente1);
+// contaCorrenteRicardo.agencia = 1001;
+// contaCorrenteRicardo.cliente = cliente1;
 contaCorrenteRicardo.depositar(500);
 
 
-const cliente2 = new Cliente();
-cliente2.nome = "Alice";
-cliente2.cpf = 44411133355;
-const contaCorrenteAlice = new ContaCorrente();
-contaCorrenteAlice.agencia = 1001;
-contaCorrenteAlice.cliente = cliente2;
+const cliente2 = new Cliente("Alice", 44411133355);
+// cliente2.nome = "Alice";
+// cliente2.cpf = 44411133355;
+const contaCorrenteAlice = new ContaCorrente(1001, cliente2);
+// contaCorrenteAlice.agencia = 1001;
+// contaCorrenteAlice.cliente = cliente2;
 
-const cliente3 = new Cliente();
-cliente3.nome = "Wesley";
-cliente3.cpf = "05841777394";
-const conta3 = new ContaCorrente();
-conta3.agencia = 1001;
-conta3.cliente = cliente3;
+const cliente3 = new Cliente("Wesley", "05841777394");
+// cliente3.nome = "Wesley";
+// cliente3.cpf = "05841777394";
+const conta3 = new ContaCorrente(1001, cliente3);
+// conta3.agencia = 1001;
+// conta3.cliente = cliente3;
 
 
 
